@@ -1,0 +1,162 @@
+:root {
+      --primary-color: #4a90e2;
+      --secondary-color: #50e3c2;
+      --bg-gradient: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
+      --text-color: #fff;
+      --input-bg: #f0f8ff;
+      --input-border: #4a90e2;
+      --navbar-bg-dark: black;
+      --body-bg-dark: #121212;
+      --text-color-dark: #fff;
+    }
+
+    .dark-mode {
+      --bg-gradient: var(--navbar-bg-dark);
+      --text-color: var(--text-color-dark);
+    }
+
+    .dark-mode body {
+      background: var(--body-bg-dark);
+      color: var(--text-color-dark);
+    }
+
+    .dark-mode .container {
+      background: #1e1e1e;
+      color: var(--text-color-dark);
+    }
+
+    .dark-mode label {
+      color: var(--text-color-dark);
+    }
+
+    .dark-mode input, .dark-mode select, .dark-mode textarea {
+      background: #333;
+      border-color: #555;
+      color: var(--text-color-dark);
+    }
+
+    .dark-mode input:focus, .dark-mode select:focus, .dark-mode textarea:focus {
+      border-color: var(--secondary-color);
+    }
+
+    body {
+      background: #f8f9fa;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    /* Navbar */
+    /* background removed for light theme */
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .nav-link {
+      color: #333 !important;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .nav-link.active {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    /* Container */
+    .container {
+      max-width: 700px;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgb(74 144 226 / 0.3);
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Form labels */
+    label {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* Inputs */
+    input, select {
+      background: var(--input-bg);
+      border: 2px solid var(--input-border);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, select:focus {
+      border-color: var(--secondary-color);
+      outline: none;
+      box-shadow: 0 0 8px var(--secondary-color);
+    }
+
+    /* Submit button */
+    .btn-submit {
+      background: var(--primary-color);
+      border: none;
+      color: var(--text-color);
+      font-weight: 700;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgb(74 144 226 / 0.5);
+    }
+    .btn-submit:hover {
+      background: var(--secondary-color);
+      box-shadow: 0 6px 18px rgb(80 227 194 / 0.7);
+    }
+
+    /* Section titles */
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    /* File input styling */
+    .form-control[type="file"] {
+      padding: 0.3rem 0.75rem;
+    }
+
+    /* Gender radio buttons */
+    .gender-options {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .gender-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gender-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      .container {
+        margin: 1rem;
+        padding: 1.5rem 1.5rem;
+      }
+      .gender-options {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
